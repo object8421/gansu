@@ -1,0 +1,471 @@
+
+/*头部*/
+.nav {
+    padding: 15px 0px;
+    height: 80px;
+}
+.nav a.logo {
+    float: left;
+    display: inline-block;
+
+    height: 60px;
+}
+div.nav .logo img{
+    height:60px;
+    width:60px;
+}
+div.nav div.logo-quote {
+    float: left;
+    margin-left: 5px;
+}
+div.nav div.logo-quote h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #656565;
+    margin:5px 0px;
+}
+
+div.nav div.logo-quote p {
+    font-size: 12px;
+    font-weight: 700;
+    color:#999;
+}
+
+div.nav div.select-city {
+    float: left;
+    margin-left:30px;
+    padding: 7px;
+
+}
+
+div.right-quote {
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #BABABA;
+
+}
+
+/*菜单*/
+
+ ul.menu-ul {
+    margin-left: 0px;
+    padding: 0px;
+    height: 50px;
+    margin-top: 20px;
+    list-style: none;
+    background-color: #f4f4f4;
+}
+
+ ul.menu-ul li{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    float: left;
+    border-left: 1px solid #fff;
+}
+
+ ul.menu-ul li a,.menu-bar ul.menu-ul li a:link {
+    width: 100px;
+    display: inline-block;
+    color: #666;
+}
+
+ ul.menu-ul li a:hover {
+    background-color: #e5e5e5;
+}
+
+ ul.menu-ul li a.active {
+    color:#fff;
+    background-color: #0085d0;
+}
+
+
+ /*轮播图和登录*/
+
+.content {
+    margin-top: 20px;
+    overflow: auto;
+
+}
+
+.content .banner {
+    float: left;
+    width: 760px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+
+}
+.content .login-form {
+    float: right;
+    width: 350px;
+    height: 409px;
+    padding: 20px;
+    background:#f4f4f4;
+}
+    /*轮播图*/
+#divSmallBox{
+    overflow:hidden;
+    *display:inline;
+    *zoom:1;
+    width:10px;
+    height:10px;
+    margin:0 5px;
+    border-radius:10px;
+    background:#ffffff;
+}
+#playBox{
+    width:760px;
+    height:409px;
+    background:#f4f4f4;
+    position:relative;
+    overflow:hidden;}
+#playBox .oUlplay {
+    padding: 0px;
+    margin: 0px;
+    width:99999px;
+    position:absolute;
+    left:0; top:0;}
+#playBox .oUlplay li{
+    float:left;
+}
+#playBox .pre{
+    cursor:pointer;
+    width:45px;
+    height:45px;
+    background:url(../img/banner/l.png) no-repeat;
+    position:absolute;
+    top:190px;
+    left:10px;
+    z-index:10;}
+#playBox .next{ cursor:pointer; width:45px; height:45px; background:url(../img/banner/r.png) no-repeat; position:absolute; top:190px; right:10px; z-index:10;}
+#playBox .smalltitle {width:760px; height:10px; position:absolute; bottom:15px; z-index:10}
+#playBox .smalltitle ul{ width:200px; margin:0 auto;}
+#playBox .smalltitle ul li{ width:10px; height:10px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#playBox .smalltitle .thistitle{ background:#69aaec;}
+
+    /*登录框*/
+
+.login-form .mt h1 {
+    font-size: 20px;
+    color: #666;
+}
+.login-form .msg-wrap {
+    margin: 15px 0;
+}
+.login-form .msg-warn {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #666;
+    border:1px solid #FFE57D;
+    background-color: #FFF6D2;
+}
+.login-form .forget-pass {
+
+    float: right;
+}
+.login-form .forget-pass a,
+.login-form .forget-pass a:link {
+    color: #666;
+}
+
+.login-form .forget-pass a:hover {
+    color: #0085D0;
+}
+
+.login-form .login-sub {
+    margin-top: 10px;
+}
+
+/*热销产品分类*/
+
+.product{
+    margin: 20px 0;
+
+}
+
+.product h1.product-type {
+    font-size: 20px;
+    color:#666;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.product ul {
+    padding: 0px;
+    overflow: auto;
+    list-style: none;
+}
+.product ul li {
+    float: left;
+    margin-right: 25px;
+
+}
+.product ul li:last-child {
+    margin-right:0px;
+}
+.product ul li a {
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    height: 160px;
+    border: 1px solid #eee;
+    background-color: #f4f4f4;
+}
+
+
+.product ul li a img ,
+.product ul li a div{
+
+    width: 260px;
+}
+.product ul li a div.box {
+    position: relative;
+    height:160px;
+}
+.product ul li a div.box div.info {
+    position: absolute;
+    height: 40px;
+    bottom: 0px;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+/*.product ul li:hover {*/
+    /*-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);*/
+    /*box-shadow: 0 15px 30px rgba(0,0,0,0.1);*/
+    /*-webkit-transform: translate3d(0, -2px, 0);*/
+    /*transform: translate3d(0, -2px, 0);*/
+    /*opacity: 0.7;*/
+/*}*/
+
+
+/*footer*/
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    overflow: auto;
+    border-top: 1px solid #eee;
+    background-color: #f4f4f4;
+
+}
+.footer .footer-item {
+    width: 200px;
+    float: left;
+
+}
+
+.footer .footer-item h3{
+    font-size:14px ;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.footer .footer-item ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.footer-item ul li a,.footer-item ul li a:link {
+    display: inline-block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    color: #666;
+}
+
+.footer-item ul li a:hover {
+    color: #0085D0;
+}
+
+.copy-rigth p{
+    margin: 10px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+/*******分页样式******/
+.pages {
+    margin: 10px;
+}
+
+.pages ul {
+    overflow: auto;
+    width: 500px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.pages ul li {
+    float: left;
+}
+.pages ul li a, .pages ul li a:link{
+    display: inline-block;
+    text-align: center;
+    min-width: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #f4f4f4;
+    color: #666;
+}
+.pages ul li a:hover{
+    border: 1px solid #4183C4;
+    color: #4183C4;
+}
+.pages ul li a.active {
+    border: 1px solid #4183C4;
+    color: #4183C4;
+}
+.pages ul li a.disabled:hover,
+.pages ul li a.disabled{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 0.65;
+    color: #666;
+}
+
+/*服务支持*/
+.new {
+    margin: 20px 0;
+    overflow: auto;
+}
+
+.new .new-item {
+    overflow: auto;
+    width: 266px;
+    float: left;
+    margin-right: 20px;
+    border:1px solid #eee;
+}
+.new .new-item:last-child{
+    margin-right: 0px;
+}
+
+.new .new-item h2 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    background: #f4f4f4;
+    color: #666;
+}
+
+.new .new-item ul{
+    margin: 0px;
+    min-height: 200px;
+    padding-left: 20px;
+    list-style: none;
+}
+.new .new-item p {
+    padding: 10px 5px;
+}
+.new .new-item p a{
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+}
+.new .new-item ul li a,.new .new-item ul li a:link{
+    height: 30px;
+    line-height: 30px;
+
+}
+
+/******我的广电*******/
+.vod-menu {
+    margin: 10px 0;
+    overflow: auto;
+}
+.vod-menu .left-menu {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #eee;
+    float: left;
+
+}
+
+.vod-menu .right-list {
+    overflow: auto;
+    width: 900px;
+    float: right;
+}
+.vod-menu .right-list div.mt {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #4183C4;
+}
+
+.vod-menu .right-list div.mt h2 {
+    width:100px;
+    padding: 15px 5px;
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    float: left;
+}
+.vod-menu .right-list div.mt  ul{
+
+    padding:0px;
+    margin-top: 9px;
+    margin-bottom:0;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    list-style: none;
+    border-top: 1px solid #f4f4f4;
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+}
+
+.vod-menu .right-list div.mt ul li.tab-item {
+    float: left;
+    text-align: center;
+    position: relative;
+
+}
+
+
+.vod-menu .right-list div.mt ul li.tab-item a {
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 25px;
+    display: inline-block;
+}
+.vod-menu .right-list div.mt ul li.tab-item.active a,
+.vod-menu .right-list div.mt ul li.tab-item a:hover
+{
+    white-space: nowrap;
+    border-left: solid 1px #4183C4;
+    border-right: solid 1px #4183C4;
+    border-top: solid 3px #4183C4;
+    color: #4183C4;
+    background: #fff;
+}
+
+
+
+.vod-menu .right-list div.mt ul li.tab-item span {
+    position: absolute;
+    margin: 16px 0;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background: rgb(204, 204, 204);
+    overflow: hidden;
+}
+.vod-menu .right-list div.mt ul li.tab-item.active span {
+    width: 0px;
+}
