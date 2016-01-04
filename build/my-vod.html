@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="./css/index.css">
 
 
-
-
-
 </head>
 <body>
+
 <!--header-->
 <div class="ui container nav">
     <a href="#" class="logo">
@@ -38,55 +36,113 @@
 
 </div>
 
-<!--body-->
+<!--menu-->
 
 <div class="ui container" id="menuBar">
     <ul class="menu-ul">
-        <li><a href="#" class="menu-item">首页</a></li>
-        <li><a href="#" class="menu-item active">我的广电</a></li>
-        <li><a href="#" class="menu-item">促销优惠</a></li>
-        <li><a href="#" class="menu-item">品牌介绍</a></li>
-        <li><a href="#" class="menu-item">服务支持</a></li>
+        <li><a href="./index.html" class="menu-item">首页</a></li>
+        <li><a href="./my-vod.html" class="menu-item active">我的广电</a></li>
+        <li><a href="./sale-promotion.html" class="menu-item">促销优惠</a></li>
+        <li><a href="./brand-info.html" class="menu-item">品牌介绍</a></li>
+        <li><a href="./service.html" class="menu-item">服务支持</a></li>
     </ul>
 </div>
 
 
 <div class="ui container vod-menu">
+
     <div class="left-menu">
 
     </div>
 
-    <div class="right-list">
+    <div class="right-list" id="my-vod">
 
         <div class="mt">
             <h2>商品类型</h2>
+
             <ul>
-                <li class="tab-item" clstag="sort-a">
-                    <a href="#">高清互动</a>
+                <li class="tab-item active" clstag="sort-a" v-on:click="changeType('hd')">
+                    <a>高清互动</a>
+                    <span style="display: none">◆</span>
+                </li>
+                <li class="tab-item" clstag="sort-b" v-on:click="changeType('professional')">
+                    <a>专业频道</a>
                     <span>◆</span>
                 </li>
-                <li class="tab-item active" clstag="sort-a">
-                    <a href="#">专业频道</a>
+                <li class="tab-item" clstag="sort-c" v-on:click="changeType('gdkd')">
+                    <a>广电宽带</a>
                     <span>◆</span>
                 </li>
-                <li class="tab-item" clstag="sort-a">
-                    <a href="#">广电宽带</a>
-                    <span>◆</span>
-                </li>
-                <li class="tab-item" clstag="sort-a">
-                    <a href="#">游戏</a>
+                <li class="tab-item" clstag="sort-d" v-on:click="changeType('game')">
+                    <a>游戏</a>
                     <span>◆</span>
 
                 </li>
-                <li class="tab-item" clstag="sort-a">
-                    <a href="#">教育</a>
+                <li class="tab-item" clstag="sort-e" v-on:click="changeType('sports')">
+                    <a>教育</a>
                 </li>
             </ul>
+
         </div>
+
         <div class="mc">
 
-111111
+            <div class="sort-type">
+
+                <h4>排序方式:</h4>
+
+                <ul>
+                    <li class="sort-item active" v-on:click="changeSort('default')">默认</li>
+                    <li class="sort-item" v-on:click="changeSort('date')">上架时间</li>
+                    <li class="sort-item" v-on:click="changeSort('priceDesc')">价格由高到低</li>
+                    <li class="sort-item" v-on:click="changeSort('priceAsc')">价格由低到高</li>
+
+                </ul>
+
+            </div>
+
+            <div data="sort-a">
+
+                <ul class="product-ul">
+
+                    <li class="vod-product-item" v-for="item in items">
+                        <div class="cover">
+                            <img src={{item.cover}} width="100%" height="100%" alt="{{item.title}}">
+                            <div class="info">
+                                <h3>{{item.title}}</h3>
+                                <p>{{item.info}}</p>
+                            </div>
+                        </div>
+
+                        <div class="product-btn-group">
+                            <a href="#"><button class="ui blue basic tiny  button left floated">
+                                查看详情
+                            </button></a>
+                            <button class="ui blue tiny icon  button right floated"><i class="shop icon"></i>立即订购</button>
+                        </div>
+                    </li>
+                 </ul>
+
+
+                <div class="ui container pages">
+                    <ul>
+                        <li><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#" class="active">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+
+                        <li><a href="#" class="disabled">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+
+
     </div>
 
 
@@ -152,11 +208,18 @@
         &copy;Copyright 2015甘肃广电网络 &nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved 甘肃广电网络有限公司
     </p>
 </div>
+
+
 <script src="./js/bower/jquery.min.js"></script>
+
+
+
 <script src="./semantic－ui/dist/semantic.min.js"></script>
 
 <script src="./js/index.js"></script>
 
+
+<script src="./js/bower/vue.min.js"></script>
 <script src="./js/my-vod.js"></script>
 
 </body>
