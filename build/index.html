@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>甘肃广电网络主页</title>
-    <link rel="stylesheet" href="./semantic－ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="./js/bower/semantic/semantic.min.css">
     <link rel="stylesheet" href="./css/index.css">
 
 
@@ -21,7 +21,7 @@
     </div>
 
     <div class="select-city">
-        <select name="city" class="ui selection dropdown" id="selectCity">
+        <select name="city" class="ui selection dropdown" id="selectCity" v-model="selectCity">
             <option value="bj">北京</option>
             <option value="tj">天津</option>
             <option value="sh">上海</option>
@@ -265,13 +265,15 @@
 
 
 <script src="./js/bower/jquery.min.js"></script>
-
-
 <script src="./js/banner_play.js"></script>
+<script src="./js/bower/semantic/semantic.min.js"></script>
 
-<script src="./semantic－ui/dist/semantic.min.js"></script>
+
+
 
 <script src="./js/index.js"></script>
+
+
 
 </body>
 

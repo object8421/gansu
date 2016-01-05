@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>我的广电</title>
-    <link rel="stylesheet" href="./semantic－ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="./js/bower/semantic/semantic.min.css">
     <link rel="stylesheet" href="./css/index.css">
 
 
@@ -90,7 +90,6 @@
             <div class="sort-type">
 
                 <h4>排序方式:</h4>
-
                 <ul>
                     <li class="sort-item active" v-on:click="changeSort('default')">默认</li>
                     <li class="sort-item" v-on:click="changeSort('date')">上架时间</li>
@@ -134,7 +133,6 @@
                         <li><a href="#">5</a></li>
                         <li><a href="#">6</a></li>
                         <li><a href="#">7</a></li>
-
                         <li><a href="#" class="disabled">下一页</a></li>
                     </ul>
                 </div>
@@ -214,12 +212,14 @@
 
 
 
-<script src="./semantic－ui/dist/semantic.min.js"></script>
+<script src="./js/bower/semantic/semantic.min.js"></script>
 
 <script src="./js/index.js"></script>
 
 
 <script src="./js/bower/vue.min.js"></script>
+<script src="./js/bower/vue-resource.min.js"></script>
+
 <script src="./js/my-vod.js"></script>
 
 </body>

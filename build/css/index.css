@@ -210,7 +210,7 @@ div.right-quote {
 
 .product ul {
     padding: 0px;
-    overflow: auto;
+    overflow: hidden;
     list-style: none;
 }
 .product ul li {
@@ -486,7 +486,6 @@ div.right-quote {
 }
 
 .vod-menu .right-list div.mc {
-    overflow: auto;
     padding: 9px;
     border-left: 1px solid #f4f4f4;
     border-right: 1px solid #f4f4f4;
@@ -587,7 +586,6 @@ div.right-quote {
     bottom: 5px;
 }
 
-
 /*产品详情页*/
 
 .product-detail {
@@ -655,12 +653,10 @@ div.right-quote {
     border-bottom: 1px dashed #ccc;
 }
 
-
 .right-info div.info-item div.price {
     font-size: 16px;
     color: #DB2828;
 }
-
 .right-info div.info-item {
     padding: 10px 0px;
     width: 500px;
@@ -673,10 +669,16 @@ div.right-quote {
 .right-info div.info-item div.dd {
     float: left;
 }
-
-
-
-
 .right-info div.shop{
     margin-top: 30px;
+}
+
+/*服务介绍页面*/
+.other-page {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.other-page .new-title {
+    text-align: center;
 }

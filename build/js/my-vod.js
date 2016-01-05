@@ -2,8 +2,6 @@
  * Created by lijie on 15/12/31.
  */
 
-
-
 $(document).ready(function(){
 
     //我的广电页面,商品大分类交互效果
@@ -36,13 +34,17 @@ $(document).ready(function(){
 
 });
 
+
+
+
 //我的广电页面
 var myVod = new Vue({
     el: '#my-vod',
     data:{
-        productsCondition:{
+        productCondition:{
             'type':'hd',
-            'sort':'default'
+            'sort':'default',
+            'page':1
         },
         items:[
             {cover:'./img/av1.jpg',title:'直播88高清版',info:'直播88加33套高清'},
@@ -54,14 +56,27 @@ var myVod = new Vue({
             {cover:'./img/av7.jpg',title:'直播88高清版',info:'直播88加33套高清'},
             {cover:'./img/av9.jpg',title:'直播88高清版',info:'直播88加33套高清'}
         ]
+
     },
     methods:{
         changeType: function(typeStr){
-            this.productsCondition['type'] = typeStr;
-            console.log(this.productsCondition);
+            this.productCondition.type = typeStr;
         },
         changeSort: function (sortStr) {
-            this.productsCondition['sort'] = sortStr;
+            this.productCondition.sort = sortStr;
         }
     }
 });
+
+myVod.$watch('productCondition',function(newVal){
+console.log(1);
+    $.ajax({
+        url:'/queryData',
+        method:'post',
+        data:{data:newVal},
+        dataType:'json',
+        success:function(res){
+            myVod.items = res;
+        }
+    });
+},{deep:true});
