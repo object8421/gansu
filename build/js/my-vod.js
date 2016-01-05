@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
 
     //我的广电页面,产品小分类排序交互
-    $('.sort-type .sort-item').bind('click.sort',function(){
+    $('.sort-type .sort-item').unbind('click.sort').bind('click.sort',function(){
 
         $(this).addClass('active').siblings().removeClass('active');
 
@@ -35,7 +35,6 @@ $(document).ready(function(){
     });
 
 });
-
 
 //我的广电页面
 var myVod = new Vue({
