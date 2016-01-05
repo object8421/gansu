@@ -399,6 +399,7 @@ div.right-quote {
     overflow: auto;
 }
 .vod-menu .left-menu {
+    margin-top: 9px;
     width: 200px;
     height: 300px;
     border: 1px solid #eee;
