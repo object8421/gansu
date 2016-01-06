@@ -1,19 +1,11 @@
-/* 
- * @name: jQuery simple zoom plus v1.0
- * @time: 2013/1/24
- * @author: sole
- * @Mail:macore@163.com
- * @url: http://www.imsole.net/
- * @Copyright 2012 - http://www.imsole.net/
- * @html5+css3+jQuery+ÏìÓ¦Ê½Éè¼Æ²¼¾Ö: http://www.imsole.net/html5/
-*/
+
 ;(function($){
 	$.fn.simpleZoom = function(options){
 		var defs = {
-			zoomBox : "#zoomBox",			//ÐèÒª·Å´óµÄÇøÓò
-			markSize : [200, 100],			//·Å´ó¾µ¿í¸ß
-			zoomSize : [400, 400],			//ÐèÒª·Å´óµÄÇøÓò¿í¸ß
-			zoomImg : [800, 800]			//ÐèÒª·Å´óµÄÇøÓòµÄÍ¼Æ¬µÄ¿í¸ß
+			zoomBox : "#zoomBox",			//ï¿½ï¿½Òªï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			markSize : [200, 100],			//ï¿½Å´ó¾µ¿ï¿½ï¿½
+			zoomSize : [400, 400],			//ï¿½ï¿½Òªï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			zoomImg : [800, 800]			//ï¿½ï¿½Òªï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½Ä¿ï¿½ï¿½
 		};
 		var opt = $.fn.extend({}, defs, options);
 		return this.each(function(){

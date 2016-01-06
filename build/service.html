@@ -8,7 +8,7 @@
 
 
 </head>
-<body>
+<body id="App">
 <!--header-->
 <div class="ui container nav">
     <a href="#" class="logo">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="select-city">
-        <select name="city" class="ui selection dropdown" id="selectCity">
+        <select name="city" class="ui selection dropdown" id="selectCity" v-model="selectCity">
             <option value="bj">北京</option>
             <option value="tj">天津</option>
             <option value="sh">上海</option>
@@ -185,10 +185,14 @@
 
 
 
-
 <script src="./js/bower/jquery.min.js"></script>
+<script src="./js/bower/jquery.cookie.js"></script>
+
 <script src="./js/bower/semantic/semantic.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/bower/vue.min.js"></script>
+
+<script src="./js/common.js"></script>
+
 
 </body>
 

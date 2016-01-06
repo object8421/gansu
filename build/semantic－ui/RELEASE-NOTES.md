@@ -814,7 +814,7 @@ More critical bug backports from `2.x` branch, as well as fixes for browserify
 - **Menu/Dropdown** - Fix dropdown headers disappearing inside menus
 - **Dropdown** - Fix unescaped character in css property causing css validation errors
 - **Form** - Fix `grouped required` fields display issues **Thanks @palmsey**
-- **All UI** - Fix `index.js` npm build to work with browserify in individual component repos **Thanks @sdimit**
+- **All UI** - Fix `common.js` npm build to work with browserify in individual component repos **Thanks @sdimit**
 - **LESS Repo** - Add missing `semantic.less` file to less repo for importing components
 
 ### Version 1.11.5 - March 23, 2015

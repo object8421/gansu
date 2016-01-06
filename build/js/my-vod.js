@@ -69,7 +69,6 @@ var myVod = new Vue({
 });
 
 myVod.$watch('productCondition',function(newVal){
-console.log(1);
     $.ajax({
         url:'/queryData',
         method:'post',
