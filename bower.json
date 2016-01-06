@@ -1,0 +1,29 @@
+{
+  "name": "gansuguangdian",
+  "description": "甘肃广电网络",
+  "main": "index.js",
+  "authors": [
+    "pookpal"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vuejs"
+  ],
+  "homepage": "https://github.com/pookpal/gansu",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue-resource": "~0.6.0",
+    "jquery.cookie": "1.4.1"
+  }
+}

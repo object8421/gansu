@@ -34,9 +34,6 @@ $(document).ready(function(){
 
 });
 
-
-
-
 //我的广电页面
 var myVod = new Vue({
     el: '#my-vod',
@@ -69,6 +66,7 @@ var myVod = new Vue({
 });
 
 myVod.$watch('productCondition',function(newVal){
+    console.log(newVal);
     $.ajax({
         url:'/queryData',
         method:'post',
@@ -79,3 +77,8 @@ myVod.$watch('productCondition',function(newVal){
         }
     });
 },{deep:true});
+
+
+
+
+
