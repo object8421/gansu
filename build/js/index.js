@@ -37,8 +37,8 @@ var hotSaleProduct = new Vue({
     }
 });
 
-hotSaleProduct.$http.get('/gansu/build/data/hotProduct.json', function(data) {
-    this.hotProducts=data;
+hotSaleProduct.$http.post('http://192.168.20.51:8083/selfservice/nativeStore/queryHotSaleProducts.action?cityCode=05', function(data) {
+    this.hotProducts=data.rows;
 }).error(function(data, status, request) {
     console.log('fail' + status + "," + request);
 });

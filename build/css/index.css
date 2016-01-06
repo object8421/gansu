@@ -216,6 +216,8 @@ div.right-quote {
 .product ul li {
     float: left;
     margin-right: 25px;
+    border: 1px solid #eee;
+    background-color: #f4f4f4;
 
 }
 .product ul li:last-child {
@@ -226,8 +228,8 @@ div.right-quote {
     display: inline-block;
     width: 260px;
     height: 160px;
-    border: 1px solid #eee;
-    background-color: #f4f4f4;
+
+
 }
 
 
