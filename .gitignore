@@ -1,23 +1,11 @@
 
 *.xml
-
 *.iml
+.idea
+semantic-ui
+doc
 
-*..idea
-
-*.bower_components
-
-*.semantic-ui/src
-
-*.semantic-ui/test
-
-*.semantic-ui/example
-
-
-
-
-.idea/.name
-
-*.xml
 
 build/.idea/workspace.xml
+
+bower_components
