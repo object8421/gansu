@@ -2,8 +2,8 @@
 *.iml
 .idea
 build/.idea
-
-semantic-ui
 doc
 bower_components
+/build/semantic－ui
 node_modules
+/build/data

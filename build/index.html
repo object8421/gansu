@@ -5,6 +5,7 @@
     <title>甘肃广电网络主页</title>
     <link rel="stylesheet" href="./js/bower/semantic/semantic.min.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/transition.css">
 
 </head>
 <body >
@@ -140,62 +141,25 @@
     <h1 class="product-type">热卖产品</h1>
 
     <ul class="product-ul">
-        <li >
-            <a href="#" class="product-item">
-                <img  src="./img/pro1.jpg" alt="产品1">
-                <!--<div class="visible content box">-->
-                    <!--<div class="info">-->
-                        <!--<h1>热卖</h1>-->
-                    <!--</div>-->
-                <!--</div>-->
-            </a>
 
+        <li v-for="item in hotProducts">
+            <a href="#" class="product-item" v-my-transition:mouseenter="jiggle">
+                <img  v-bind:src="item.img" alt="产品1">
+            </a>
         </li>
 
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro2.jpg" alt="产品1">
-            </a>
-        </li>
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro3.jpg" alt="产品1">
-            </a>
-        </li>
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro4.jpg" alt="产品1">
-            </a>
-        </li>
     </ul>
 </div>
 
 
 
-<div class="ui container product">
+<div class="ui container product" id="promotionProduct">
 
     <h1 class="product-type">超值促销</h1>
-
     <ul class="product-ul">
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro5.jpg" alt="产品1">
-            </a>
-        </li>
-
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro6.jpg" alt="产品1">
-            </a>
-        </li>
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro7.jpg" alt="产品1">
-            </a>
-        </li>
-        <li>
-            <a href="#" class="product-item">
-                <img src="./img/pro8.jpg" alt="产品1">
+        <li v-for="item in promotionProducts">
+            <a href="#" class="product-item" v-my-transition:mouseenter="jiggle">
+                <img  v-bind:src="item.img" alt="产品1">
             </a>
         </li>
     </ul>
@@ -268,6 +232,7 @@
 <script src="./js/banner_play.js"></script>
 <script src="./js/bower/semantic/semantic.min.js"></script>
 <script src="./js/bower/vue.min.js"></script>
+<script src="./js/bower/vue-resource.min.js"></script>
 
 <script src="./js/common.js"></script>
 

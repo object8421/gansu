@@ -2,9 +2,6 @@
  * Created by lijie on 15/12/30.
  */
 
-
-
-
 $(document).ready(function(){
 
     //首页选择目标城市
@@ -15,27 +12,26 @@ $(document).ready(function(){
         $(this).addClass('active').parent().siblings().find('a.menu-item').removeClass('active');
     });
 
-
+    //登录记住密码复选框
+    $('.ui.checkbox').checkbox();
 
 });
 
-
-
 //城市缓存
 var city = $.cookie('selectCity') || 'tj';
-console.log(city);
 
-//顶级App
+//更换城市
 var App = new Vue({
     el: '#App',
     data: {
         selectCity:city
+    },
+    watch:{
+        selectCity:function(newVal){
+            console.log('--------------city has changed to '+newVal+'--------------------');
+            this.selectCity = newVal;
+            $.cookie('selectCity',newVal);//缓存城市数据
+        }
     }
 });
 
-App.$watch('selectCity',function(newVal){
-    console.log(newVal);
-    $.cookie('selectCity',newVal);
-    App.$broadcast('changeCity',newVal);
-
-});

@@ -2,51 +2,65 @@
  * Created by lijie on 16/1/6.
  */
 
+//增加动画指令
+Vue.directive('my-transition',{
+    bind: function() {
 
-//轮播图和登录
-var homeBanner = new Vue({
+        var expression = this.expression ||'jiggle';
 
-    el:'#HomeBanner',
-    data: {
-        banners:[
+        $(this.el).bind({
+            mouseenter:function () {
+                $(this).addClass(expression + '-enter');
+            },
+            mouseout:function () {
+                $(this).removeClass(expression + '-enter');
+            }
 
-        ]
+        });
     }
 });
 
+
+//轮播图
+var homeBanner = new Vue({
+    el:'#HomeBanner',
+    data: {
+        banners:[]
+    }
+});
 
 //热卖产品
 var hotSaleProduct = new Vue({
     el: '#hotSaleProduct',
     data: {
-        cityCode:'',
-        items:[
-        ]
-    },
-    events: {
-        changeCity:function(data){
-            console.log(data);
-        }
-
+        hotProducts:''
     }
 });
 
-//超值促销
-
-
-
-
-$(document).ready(function(){
-    //登录复选框
-    $('.ui.checkbox').checkbox();
-
-    //首页 促销产品鼠标移动加动画
-    $('.product-item').bind('mouseenter',function(){
-        $(this).find('img')
-            .transition('jiggle')
-        ;
-    });
+hotSaleProduct.$http.get('/gansu/build/data/hotProduct.json', function(data) {
+    this.hotProducts=data;
+}).error(function(data, status, request) {
+    console.log('fail' + status + "," + request);
 });
+
+
+
+//超值促销
+var promotionProduct = new Vue({
+    el: '#promotionProduct',
+    data: {
+        promotionProducts:''
+    }
+});
+
+promotionProduct.$http.get('/gansu/build/data/promotionProducts.json', function(data) {
+    this.promotionProducts=data;
+}).error(function(data, status, request) {
+    console.log('fail' + status + "," + request);
+});
+
+
+
 
 
 
