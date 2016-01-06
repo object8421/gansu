@@ -1,10 +1,9 @@
-
 *.xml
 *.iml
 .idea
+build/.idea
+
 semantic-ui
 doc
-
-build/.idea/workspace.xml
 bower_components
 node_modules
